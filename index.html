@@ -28,6 +28,7 @@
       color: var(--text);
       -webkit-font-smoothing: antialiased;
     }
+
     a { color: inherit; text-decoration: none; }
 
     /* HEADER */
@@ -52,17 +53,12 @@
       gap: 20px;
     }
     .avatar {
-      width: 140px;
-      height: 140px;
+      width: 140px; height: 140px;
       border-radius: 50%;
       overflow: hidden;
       border: 4px solid rgba(255,255,255,0.12);
     }
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
     .hero-info {
       flex: 1;
@@ -85,13 +81,14 @@
       color: rgba(232,238,246,0.85);
       line-height: 1.55;
     }
+
     .contact-icons span {
       margin-right: 16px;
       font-size: 14px;
       color: var(--muted);
     }
 
-    /* MAIN */
+    /* MAIN WRAPPER */
     .wrap {
       max-width: 1100px;
       margin: -60px auto 80px;
@@ -126,68 +123,39 @@
     ul.pl { padding-left: 20px; margin: 10px 0; }
     ul.pl li { margin-bottom: 6px; }
 
-    /* Experience */
     .exp-item { margin-bottom: 18px; }
     .exp-item h5 { margin: 0; font-size: 16px; font-weight: 600; }
     .exp-item small { display: block; color: var(--muted); margin-bottom: 6px; }
 
-    /* QR CODE */
+    /* QR */
     .qr-section { text-align: center; }
     .qr-wrapper {
       display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .qr-item { flex: 1; }
-    .qr-item img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-    }
-    .qr-label {
-      margin-top: 8px;
-      font-size: 12px;
-      color: #555;
-      font-weight: 600;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero-info { text-align: center; }
-      .hero-info p { max-width: 640px; margin: 0 auto; }
-      .contact-icons span { display: block; margin-bottom: 6px; }
-    }
-
-    /* Print */
-    @media print {
-      body { background: white; }
-      .hero { padding: 20px; }
-      .wrap { margin: 0; padding: 0; }
-      .card { box-shadow: none; border: 1px solid #ddd; }
-    }
-    .qr-wrapper {
-      display: flex;
       justify-content: center;
-      align-items: flex-start;
-      gap: 25px;          /* jarak antar QR */
+      gap: 30px;
       margin-top: 15px;
     }
-
-    .qr-item {
-      text-align: center;
-    }
-
+    .qr-item { text-align: center; }
     .qr-item img {
-      width: 180px;       /* ukuran gambar */
+      width: 170px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
+    .qr-label {
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero-info { text-align: center; }
+      .contact-icons span { display: block; margin-bottom: 6px; }
+      .qr-wrapper { flex-direction: column; }
+    }
 
   </style>
-
 </head>
 <body>
 
@@ -197,6 +165,7 @@
       <div class="avatar">
         <img src="1659693430497.jpg" alt="Didin Silahudin">
       </div>
+
       <div class="hero-info">
         <h1>DIDIN SILAHUDIN</h1>
         <div class="role">PROGRAMMER</div>
@@ -213,16 +182,16 @@
     </div>
   </header>
 
-  <!-- CONTENT -->
+  <!-- MAIN -->
   <main class="wrap">
     <div class="grid">
 
-      <!-- LEFT COLUMN -->
+      <!-- LEFT -->
       <aside>
 
-        <section class="card contact">
+        <section class="card">
           <h2 class="section-title">Contact</h2>
-          <p class="muted"><i class="fas fa-map-marker-alt"></i> Kp. Waluran, Desa Kosambi Ronyok, Anyar, Serang, Banten. 42166</p>
+          <p class="muted"><i class="fas fa-map-marker-alt"></i> Kp. Waluran, Desa Kosambi Ronyok, Anyar, Serang, Banten</p>
           <p class="muted"><i class="fas fa-phone"></i> 0838-7281-0804</p>
           <p class="muted"><i class="fas fa-envelope"></i> silahudindidin@gmail.com</p>
         </section>
@@ -234,114 +203,124 @@
             <li>Java (Android)</li>
             <li>JavaScript</li>
             <li>HTML & CSS</li>
-            <li>MySQL & SQL Server</li>
+            <li>MySQL</li>
             <li>API Integration</li>
             <li>Photoshop & CorelDraw</li>
-            <li>Microsoft Office</li>
+            <li>Office</li>
             <li>Troubleshooting</li>
           </ul>
         </section>
 
         <section class="card">
           <h2 class="section-title">Education</h2>
-          <div class="muted"><strong>UNIVERSITAS RAHARJA</strong><br>M.T.I – Informatics Engineering (2022)</div>
-          <hr>
-          <div class="muted"><strong>UNIVERSITAS SERANG RAYA</strong><br>S.Kom – Informatics Engineering (2019)</div>
-          <hr>
+          <div class="muted"><strong>UNIVERSITAS RAHARJA</strong><br>M.T.I (2022)</div><hr>
+          <div class="muted"><strong>UNIVERSITAS SERANG RAYA</strong><br>S.Kom (2019)</div><hr>
           <div class="muted"><strong>PPM DAREL AZHAR</strong><br>Science (2014)</div>
         </section>
 
-
+        <section class="card">
+          <h2 class="section-title">Internship</h2>
+          <div class="muted">
+            <strong>PT. KRAKATAU IT</strong><br>Aug 2016 — Cilegon<br>
+            <strong>SYSTEM ANALYSIS</strong>
+          </div>
+        </section>
 
       </aside>
 
-      <!-- RIGHT COLUMN -->
+      <!-- RIGHT -->
       <section>
 
-        <div class="card">
+        <section class="card">
           <h2 class="section-title">Work Experience</h2>
 
           <div class="exp-item">
             <h5>PT IHI POWER SERVICE INDONESIA</h5>
-            <small>Mar 2019 - Present — Serang</small>
-            <p class="muted"><strong>STAFF IT (PROGRAMMER)</strong></p>
+            <small>Mar 2019 – Present — Serang</small>
+            <p class="muted"><strong>STAFF IT / PROGRAMMER</strong></p>
             <ul class="pl muted">
-              <li>Mengembangkan sistem Web & Android.</li>
+              <li>Mengembangkan sistem Web & Android</li>
               <li>Store Consumable System</li>
-              <li>Inspection Status & Log (Android)</li>
-              <li>Fabrication Check Sheet</li>
+              <li>Inspection Status & Log Android</li>
+              <li>Fabrication Checksheet</li>
               <li>Inquiry Register System</li>
               <li>Rejection Record</li>
-              <li>Welding Map</li>
-              <li>Client Survey System</li>
               <li>Engineering Progress Report</li>
-              <li>TMS & Finance System</li>
-              <li>Change Schedule & SPL</li>
-              <li>Attendance System & Payroll</li>
+              <li>Attendance & Payroll</li>
               <li>IT Inventory</li>
             </ul>
           </div>
 
           <div class="exp-item">
             <h5>PT PRISKILA PRIMA MAKMUR</h5>
-            <small>Dec 2018 - Mar 2019 — Tangerang</small>
+            <small>Dec 2018 – Mar 2019 — Tangerang</small>
             <p class="muted"><strong>PROGRAMMER</strong></p>
-            <ul class="pl muted">
-              <li>Aplikasi katalog parfum (Web & Android).</li>
-            </ul>
+            <ul class="pl muted"><li>Aplikasi katalog parfum (Web & Android)</li></ul>
           </div>
 
           <div class="exp-item">
             <h5>PENGADILAN TINGGI AGAMA BANTEN</h5>
-            <small>Jan 2018 - Jun 2018 — Serang</small>
+            <small>Jan 2018 – Jun 2018 — Serang</small>
             <p class="muted"><strong>IT SUPPORT</strong></p>
             <ul class="pl muted">
               <li>Instalasi jaringan</li>
-              <li>Perawatan komputer</li>
               <li>Technical support</li>
             </ul>
           </div>
-        </div>
 
-        <div class="card">
-          <h2 class="section-title">Internship</h2>
-          <div class="muted">
-            <strong>PT. KRAKATAU INFORMATION TECHNOLOGY</strong><br>
-            Aug 2016 — Cilegon<br>
-            <strong>SYSTEM ANALYSIS</strong>
+          <div class="exp-item">
+            <h5>UNIVERSITAS — (DOSEN)</h5>
+            <small>2023</small>
+            <p class="muted"><strong>TENAGA PENGAJAR</strong></p>
+            <ul class="pl muted">
+              <li>Mengajar pemrograman & basis data</li>
+              <li>Membimbing skripsi</li>
+              <li>Menyusun modul & materi</li>
+            </ul>
           </div>
-        </div>
 
+        </section>
       </section>
-      
+
     </div>
+
+    <!-- BELOW GRID -->
+    <section class="card">
+      <h2 class="section-title">Professional Strengths</h2>
+      <ul class="pl muted">
+        <li>Memahami konsep AI & LLM</li>
+        <li>Mengintegrasikan AI ke Aplikasi</li>
+        <li>Analisis sistem</li>
+        <li>Problem solving cepat</li>
+        <li>Teamwork & komunikasi baik</li>
+      </ul>
+    </section>
+
   </main>
 
-        <!-- QR CONTACTS -->
-        <section class="card qr-section">
-          <h2 class="section-title">QR Contacts</h2>
+  <!-- QR CONTACTS -->
+  <section class="card qr-section" style="max-width:1100px; margin:0 auto 60px;">
+    <h2 class="section-title">QR Contacts</h2>
 
-          <div class="qr-wrapper">
+    <div class="qr-wrapper">
 
-            <!-- GITHUB QR -->
-            <div class="qr-item">
-              <img src="Qr_git.jpg" alt="GitHub QR">
-              <p class="qr-label">GitHub</p>
-            </div>
+      <div class="qr-item">
+        <img src="Qr_git.jpg" alt="GitHub QR">
+        <p class="qr-label">GitHub</p>
+      </div>
 
-            <!-- EMAIL QR -->
-            <div class="qr-item">
-              <img src="Qr_email.jpg" alt="Email QR">
-              <p class="qr-label">Email</p>
-            </div>
+      <div class="qr-item">
+        <img src="Qr_email.jpg" alt="Email QR">
+        <p class="qr-label">Email</p>
+      </div>
 
-            <!-- WHATSAPP QR -->
-            <div class="qr-item">
-              <img src="Qr_wa.jpg" alt="WhatsApp QR">
-              <p class="qr-label">WhatsApp</p>
-            </div>
+      <div class="qr-item">
+        <img src="Qr_wa.jpg" alt="WhatsApp QR">
+        <p class="qr-label">WhatsApp</p>
+      </div>
 
-          </div>
-        </section>
+    </div>
+  </section>
+
 </body>
 </html>
