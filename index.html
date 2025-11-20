@@ -4,10 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Resume — Didin Silahudin</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   <style>
-    :root{
+    :root {
       --bg: #0d1b2a;
       --page-bg: #eef4fb;
       --card-bg: #f5fbff;
@@ -16,216 +18,330 @@
       --muted: #778da9;
       --text: #0d1b2a;
       --radius: 16px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      font-family: 'Inter', system-ui, -apple-system;
     }
 
-    *{box-sizing:border-box;}
-    body{margin:0;background:var(--page-bg);color:var(--text);-webkit-font-smoothing:antialiased;}
-    a{color:inherit;text-decoration:none}
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
 
-    /* Header */
-    .hero{
+    /* HEADER */
+    .hero {
       background: linear-gradient(135deg,#0d1b2a 0%, #16283a 100%);
-      padding:60px 20px 80px;
-      text-align:center;
-      color:#e0e1dd;
-      position:relative;
+      padding: 60px 20px 90px;
+      text-align: center;
+      color: #e0e1dd;
     }
-    .hero .glass{
-      max-width:1000px;
-      margin:0 auto;
-      padding:30px 20px;
-      border-radius:20px;
+    .glass {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      border-radius: 20px;
       background: rgba(255,255,255,0.05);
       backdrop-filter: blur(6px);
-      box-shadow:0 8px 30px rgba(6,12,24,0.4);
-      display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px;
+      box-shadow: 0 8px 30px rgba(6,12,24,0.4);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
     }
-    .avatar{width:140px;height:140px;border-radius:50%;border:4px solid rgba(255,255,255,0.12);}
-    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
-    .hero-info{flex:1;min-width:240px;text-align:left}
-    .hero-info h1{margin:0;font-size:30px;color:#e8eef6;font-weight:700;}
-    .hero-info .role{color:var(--muted);margin-top:4px;font-weight:600;}
-    .hero-info p{margin:10px 0 0;color:rgba(232,238,246,0.85);}
-    .hero-info .contact-icons span{margin-right:16px;font-size:14px;color:var(--muted);}
-
-    /* Main layout */
-    .wrap{max-width:1100px;margin:-60px auto 80px;padding:0 20px;}
-    .grid{display:grid;grid-template-columns:350px 1fr;gap:24px;}
-
-    /* Card */
-    .card{
-      background:var(--card-bg);
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow:  8px 8px 20px rgba(14,25,40,0.06), -8px -8px 20px rgba(255,255,255,0.9);
-      border:1px solid rgba(120,150,180,0.06);
-      margin-bottom:20px;
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(255,255,255,0.12);
     }
-    h2.section-title{font-size:18px;margin-bottom:12px;color:var(--accent);font-weight:700;}
-    .muted{color:var(--muted);font-size:14px;line-height:1.5;}
-    ul.pl{padding-left:20px;margin:10px 0;}
-    ul.pl li{margin-bottom:6px;}
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-info {
+      flex: 1;
+      min-width: 260px;
+      text-align: left;
+    }
+    .hero-info h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      color: #e8eef6;
+    }
+    .role {
+      color: var(--muted);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .hero-info p {
+      margin: 10px 0 0;
+      color: rgba(232,238,246,0.85);
+      line-height: 1.55;
+    }
+    .contact-icons span {
+      margin-right: 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* MAIN */
+    .wrap {
+      max-width: 1100px;
+      margin: -60px auto 80px;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 24px;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 8px 8px 20px rgba(14,25,40,0.06),
+      -8px -8px 20px rgba(255,255,255,0.9);
+      border: 1px solid rgba(120,150,180,0.06);
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .muted { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    ul.pl { padding-left: 20px; margin: 10px 0; }
+    ul.pl li { margin-bottom: 6px; }
 
     /* Experience */
-    .exp-item{margin-bottom:18px;}
-    .exp-item h5{margin:0;font-size:16px;color:var(--text);font-weight:600;}
-    .exp-item small{display:block;color:var(--muted);margin-bottom:6px;}
-    .exp-item p{margin:6px 0;color:var(--muted);}
+    .exp-item { margin-bottom: 18px; }
+    .exp-item h5 { margin: 0; font-size: 16px; font-weight: 600; }
+    .exp-item small { display: block; color: var(--muted); margin-bottom: 6px; }
+
+    /* QR CODE */
+    .qr-section { text-align: center; }
+    .qr-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .qr-item { flex: 1; }
+    .qr-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    .qr-label {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #555;
+      font-weight: 600;
+    }
 
     /* Responsive */
-    @media(max-width:900px){
-      .grid{grid-template-columns:1fr;}
-      .hero-info{text-align:center;}
-      .hero-info p{max-width:640px;margin:0 auto;}
-      .hero-info .contact-icons span{display:block;margin-bottom:6px;}
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero-info { text-align: center; }
+      .hero-info p { max-width: 640px; margin: 0 auto; }
+      .contact-icons span { display: block; margin-bottom: 6px; }
     }
 
-    /* Print friendly */
-    @media print{
-      body{background:white;}
-      .hero{padding:20px;}
-      .wrap{margin:0;padding:0;}
-      .card{box-shadow:none;border:1px solid #ddd;}
+    /* Print */
+    @media print {
+      body { background: white; }
+      .hero { padding: 20px; }
+      .wrap { margin: 0; padding: 0; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
     }
+    .qr-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 25px;          /* jarak antar QR */
+      margin-top: 15px;
+    }
+
+    .qr-item {
+      text-align: center;
+    }
+
+    .qr-item img {
+      width: 180px;       /* ukuran gambar */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
   </style>
+
 </head>
 <body>
 
-<header class="hero">
-  <div class="glass">
-    <div class="avatar">
-      <img src="1659693430497.jpg" alt="Didin Silahudin">
-    </div>
-    <div class="hero-info">
-      <h1>DIDIN SILAHUDIN</h1>
-      <div class="role">PROGRAMMER</div>
-      <p class="muted">Programmer who is patient, empathetic and hardworking.</p>
-      <div class="contact-icons" style="margin-top:10px;">
-        <span><i class="fas fa-map-marker-alt"></i> Serang, Banten</span>
-        <span><i class="fas fa-phone"></i> 0838-7281-0804</span>
-        <span><i class="fas fa-envelope"></i> silahudindidin@gmail.com</span>
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="glass">
+      <div class="avatar">
+        <img src="1659693430497.jpg" alt="Didin Silahudin">
+      </div>
+      <div class="hero-info">
+        <h1>DIDIN SILAHUDIN</h1>
+        <div class="role">PROGRAMMER</div>
+        <p class="muted">
+          Programmer dengan pengalaman lebih dari 6 tahun dalam pengembangan aplikasi web dan Android. Teliti, cepat belajar, dan berorientasi pada efisiensi proses.
+        </p>
+
+        <div class="contact-icons" style="margin-top:10px;">
+          <span><i class="fas fa-map-marker-alt"></i> Serang, Banten</span>
+          <span><i class="fas fa-phone"></i> 0838-7281-0804</span>
+          <span><i class="fas fa-envelope"></i> silahudindidin@gmail.com</span>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-<br/>
-<br/>
-<br/>
-<main class="wrap">
-  <div class="grid">
+  </header>
 
-    <!-- LEFT COLUMN -->
-    <aside>
-      <section class="card contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="muted"><i class="fas fa-map-marker-alt"></i> Kp. Waluran, RT/RW. 003/001, Desa Kosambi Ronyok, Kec. Anyar, Kab. Serang, Banten. Pos: 42166</p>
-        <p class="muted"><i class="fas fa-phone"></i> 0838-7281-0804</p>
-        <p class="muted"><i class="fas fa-envelope"></i> silahudindidin@gmail.com</p>
-      </section>
+  <!-- CONTENT -->
+  <main class="wrap">
+    <div class="grid">
 
-      <section class="card">
-        <h2 class="section-title">Skills</h2>
-        <ul class="pl">
-          <li>MS Office</li>
-          <li>PHP (Native)</li>
-          <li>Java (Android Native)</li>
-          <li>CSS (Cascading Style Sheet)</li>
-          <li>Database MySQL</li>
-          <li>JavaScript</li>
-          <li>Photoshop</li>
-          <li>CorelDraw</li>
-          <li>API (Application Programming Interface)</li>
-          <li>Database SQL Server</li>
-        </ul>
-      </section>
+      <!-- LEFT COLUMN -->
+      <aside>
 
-      <section class="card">
-        <h2 class="section-title">Education</h2>
-        <div class="muted">
-          <strong>UNIVERSITAS RAHARJA</strong><br>
-          M.T.I – Informatics Engineering, IPK: 3.80 (2022) — Tangerang
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(60,90,120,0.06);margin:12px 0">
-        <div class="muted">
-          <strong>UNIVERSITAS SERANG RAYA</strong><br>
-          S.Kom – Informatics Engineering, IPK: 3.88 (2019) — Serang
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(60,90,120,0.06);margin:12px 0">
-        <div class="muted">
-          <strong>PPM DAREL AZHAR</strong><br>
-          Boarding High School — Science (2014) — Lebak
-        </div>
-      </section>
-    </aside>
+        <section class="card contact">
+          <h2 class="section-title">Contact</h2>
+          <p class="muted"><i class="fas fa-map-marker-alt"></i> Kp. Waluran, Desa Kosambi Ronyok, Anyar, Serang, Banten. 42166</p>
+          <p class="muted"><i class="fas fa-phone"></i> 0838-7281-0804</p>
+          <p class="muted"><i class="fas fa-envelope"></i> silahudindidin@gmail.com</p>
+        </section>
 
-    <!-- RIGHT COLUMN -->
-    <section>
-
-      <div class="card">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="exp-item">
-          <h5>PT IHI POWER SERVICE INDONESIA</h5>
-          <small>Mar 2019 - Present — Serang</small>
-          <p class="muted"><strong>STAFF IT (PROGRAMMER)</strong></p>
-          <ul class="pl muted">
-            <li>Store Consumable (Web Based)</li>
-            <li>ISL (Inspection Status &amp; Log) (Android)</li>
-            <li>FCS (Fabrication Check Sheet) Header / Panel / Piping (Android)</li>
-            <li>Inquiry Register System (Web)</li>
-            <li>Rejection Record (Android)</li>
-            <li>Welding Map (Android)</li>
-            <li>Client Survey (Web)</li>
-            <li>Engineering Progress Report (Web)</li>
-            <li>GA Transport (Web &amp; Android)</li>
-            <li>Integrasi System (Web)</li>
-            <li>Change Schedule &amp; SPL (Web)</li>
-            <li>Attendance System &amp; Payroll (Web &amp; Android)</li>
+        <section class="card">
+          <h2 class="section-title">Skills</h2>
+          <ul class="pl">
+            <li>PHP (Native)</li>
+            <li>Java (Android)</li>
+            <li>JavaScript</li>
+            <li>HTML & CSS</li>
+            <li>MySQL & SQL Server</li>
+            <li>API Integration</li>
+            <li>Photoshop & CorelDraw</li>
+            <li>Microsoft Office</li>
+            <li>Troubleshooting</li>
           </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Education</h2>
+          <div class="muted"><strong>UNIVERSITAS RAHARJA</strong><br>M.T.I – Informatics Engineering (2022)</div>
+          <hr>
+          <div class="muted"><strong>UNIVERSITAS SERANG RAYA</strong><br>S.Kom – Informatics Engineering (2019)</div>
+          <hr>
+          <div class="muted"><strong>PPM DAREL AZHAR</strong><br>Science (2014)</div>
+        </section>
+
+
+
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <section>
+
+        <div class="card">
+          <h2 class="section-title">Work Experience</h2>
+
+          <div class="exp-item">
+            <h5>PT IHI POWER SERVICE INDONESIA</h5>
+            <small>Mar 2019 - Present — Serang</small>
+            <p class="muted"><strong>STAFF IT (PROGRAMMER)</strong></p>
+            <ul class="pl muted">
+              <li>Mengembangkan sistem Web & Android.</li>
+              <li>Store Consumable System</li>
+              <li>Inspection Status & Log (Android)</li>
+              <li>Fabrication Check Sheet</li>
+              <li>Inquiry Register System</li>
+              <li>Rejection Record</li>
+              <li>Welding Map</li>
+              <li>Client Survey System</li>
+              <li>Engineering Progress Report</li>
+              <li>TMS & Finance System</li>
+              <li>Change Schedule & SPL</li>
+              <li>Attendance System & Payroll</li>
+              <li>IT Inventory</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h5>PT PRISKILA PRIMA MAKMUR</h5>
+            <small>Dec 2018 - Mar 2019 — Tangerang</small>
+            <p class="muted"><strong>PROGRAMMER</strong></p>
+            <ul class="pl muted">
+              <li>Aplikasi katalog parfum (Web & Android).</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h5>PENGADILAN TINGGI AGAMA BANTEN</h5>
+            <small>Jan 2018 - Jun 2018 — Serang</small>
+            <p class="muted"><strong>IT SUPPORT</strong></p>
+            <ul class="pl muted">
+              <li>Instalasi jaringan</li>
+              <li>Perawatan komputer</li>
+              <li>Technical support</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp-item">
-          <h5>PT PRISKILA PRIMA MAKMUR</h5>
-          <small>Dec 2018 - Mar 2019 — Tangerang</small>
-          <p class="muted"><strong>STAFF IT (PROGRAMMER)</strong></p>
-          <ul class="pl muted">
-            <li>Catalogue Parfume Casablanca, Bellagio, Regaza, Camellia, Maria Jose (Web &amp; Android)</li>
-          </ul>
+        <div class="card">
+          <h2 class="section-title">Internship</h2>
+          <div class="muted">
+            <strong>PT. KRAKATAU INFORMATION TECHNOLOGY</strong><br>
+            Aug 2016 — Cilegon<br>
+            <strong>SYSTEM ANALYSIS</strong>
+          </div>
         </div>
 
-        <div class="exp-item">
-          <h5>PENGADILAN TINGGI AGAMA BANTEN</h5>
-          <small>Jan 2018 - Jun 2018 — Serang</small>
-          <p class="muted"><strong>IT SUPPORT</strong></p>
-          <ul class="pl muted">
-            <li>Network Installation</li>
-            <li>Technician Computer</li>
-            <li>Maintenance &amp; Service Computer</li>
-          </ul>
-        </div>
-      </div>
+      </section>
+      
+    </div>
+  </main>
 
-      <div class="card">
-        <h2 class="section-title">Internship</h2>
-        <div class="muted">
-          <strong>PT. KRAKATAU INFORMATION TECHNOLOGY</strong><br>
-          Aug 2016 — Cilegon<br>
-          <strong>SYSTEM ANALYSIS</strong>
-        </div>
-      </div>
+        <!-- QR CONTACTS -->
+        <section class="card qr-section">
+          <h2 class="section-title">QR Contacts</h2>
 
-      <div class="card">
-        <h2 class="section-title">Additional</h2>
-        <ul class="pl muted">
-          <li>Graphic Design: Photoshop, CorelDraw</li>
-          <li>API (Application Programming Interface)</li>
-          <li>Database SQL Server</li>
-        </ul>
-      </div>
-    </section>
+          <div class="qr-wrapper">
 
-  </div>
-</main>
+            <!-- GITHUB QR -->
+            <div class="qr-item">
+              <img src="Qr_git.jpg" alt="GitHub QR">
+              <p class="qr-label">GitHub</p>
+            </div>
 
+            <!-- EMAIL QR -->
+            <div class="qr-item">
+              <img src="Qr_email.jpg" alt="Email QR">
+              <p class="qr-label">Email</p>
+            </div>
+
+            <!-- WHATSAPP QR -->
+            <div class="qr-item">
+              <img src="Qr_wa.jpg" alt="WhatsApp QR">
+              <p class="qr-label">WhatsApp</p>
+            </div>
+
+          </div>
+        </section>
 </body>
 </html>
